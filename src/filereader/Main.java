@@ -1,5 +1,10 @@
 package filereader;
 
+/**
+ * 
+ * @author Hayato Kawai
+ *
+ */
 public class Main {
 
 	public static void main (String []args) {

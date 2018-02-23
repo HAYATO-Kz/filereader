@@ -5,10 +5,20 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+/**
+ * Read a file by InputStreamReader,collect a data as StringBuilder 
+ * @author Hayato Kawai
+ *
+ */
 public class TaskStringBuilder implements Runnable {
 	
 	private int size = (readFileToStringBuilder("src/Alice.txt").length());
 	
+	/**
+	   * Read a file by InputStreamReader, append to String and return that to String
+	   * @param filename is the file's name that will read
+	   * @return a content in the file with String
+	   */
 	public static String readFileToStringBuilder (String filename) {
 		StringBuilder data = new StringBuilder();
 		InputStream in = null;
@@ -39,6 +49,10 @@ public class TaskStringBuilder implements Runnable {
 		readFileToStringBuilder("src/Alice.txt");
 	}
 	
+	/**
+	 * show how many char in the file
+	 */
+	@Override
 	public String toString () {
 		return String.format("[StringBuilder]Read %d-char",size);
 	}
